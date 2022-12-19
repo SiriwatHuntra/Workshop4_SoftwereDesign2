@@ -1,0 +1,33 @@
+h1 {
+    color:rgb(33, 16, 57);  
+    font-size: 120px;
+    font-family:sans-serif;
+    text-align: center;
+
+    animation: animate 5s linear infinite;
+}
+
+body {
+    color:rgb(255, 253, 253);
+    background-image: linear-gradient(to right, #2a2241, #090c32);
+    position:static;
+    font-size: 20px;  
+}
+
+@keyframes animate
+{
+    0%, 18%, 20%, 50%, 60%, 80%, 90%, 92%
+    {
+        color: aqua;
+        text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50.1%, 60.1%, 80.1%, 89.9%, 91.9%, 100%
+    {
+        color: white;
+        text-shadow: 0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 160px cyan;
+    }
+}
