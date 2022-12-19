@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const worker = require('./worker')
+
+app.use(express.static(__dirname + '/public'));
 
 //app.get = page browser
 app.get('/', (req, res) => {
@@ -14,10 +15,6 @@ app.get('/about', (req, res) => {
 }
 ) 
 
-app.get('/a', (req, res) => {
-    res.send(worker.Hello())
-    
-})
 
 app.get('*', function(req, res){
     res.sendFile(__dirname + '/public/404.html')
